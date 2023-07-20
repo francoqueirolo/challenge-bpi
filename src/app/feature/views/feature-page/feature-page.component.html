@@ -19,6 +19,7 @@
 </div>
 
 <app-feature-table
+  #captureDiv
   (eeEdit)="onEditUser($event)"
   (eeDelete)="onDeleteUser($event)"
   [data]="data"
@@ -52,3 +53,5 @@
   (eeConfirm)="onModalConfirm($event)"
   (eeCancel)="onModalCancel()"
 ></app-feature-modal>
+
+<app-feature-saver></app-feature-saver>

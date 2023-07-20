@@ -32,7 +32,7 @@ export class UserService implements ICRUD<IUser> {
   }
 
   delete(id: string): Observable<any> {
-    const url = `${this.baseUrl}/users_/${id}`;
+    const url = `${this.baseUrl}/users/${id}`;
     return this.http.delete(url);
   }
 }

@@ -4,7 +4,7 @@ import { actions } from '@storybook/addon-actions';
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
 const meta: Meta<FeatureModalComponent> = {
-  title: 'Example/FeatureModalComponent',
+  title: 'BPI/FeatureModalComponent',
   component: FeatureModalComponent,
   tags: ['autodocs'],
   render: (args: FeatureModalComponent) => ({
@@ -23,8 +23,8 @@ export const Basic: Story = {
   args: {
     show: true,
     currentUser: {
-      id: 1,
-      name: 'Pikachu',
+      id: '1',
+      name: 'Franco',
       email: 'nobody@example.com',
     },
   },

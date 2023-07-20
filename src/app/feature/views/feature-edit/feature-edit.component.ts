@@ -37,9 +37,9 @@ export class FeatureEditComponent implements OnInit {
   ngOnInit(): void {
     const user = this.currentUser;
     this.form.patchValue({
-      id: user.id,
-      name: user.name,
-      email: user.email,
+      id: user?.id,
+      name: user?.name,
+      email: user?.email,
     });
   }
 

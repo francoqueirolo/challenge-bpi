@@ -8,46 +8,31 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 describe('FeaturePageComponent', () => {
   let component: FeaturePageComponent;
   let fixture: ComponentFixture<FeaturePageComponent>;
-  let pokemonServiceMock: any;
-  let pokemons: IUser[] = [
+  let userServiceMock: any;
+  let users: IUser[] = [
     {
-      id: 1,
-      name: 'Pikachu',
-      image: '',
-      attack: 0,
-      defense: 0,
-      hp: 0,
-      type: '',
-      idAuthor: 1,
+      id: '1',
+      name: 'Franco',
+      email: 'me@bpi.com',
     },
     {
-      id: 2,
-      name: 'Pikachu',
-      image: '',
-      attack: 0,
-      defense: 0,
-      hp: 0,
-      type: '',
-      idAuthor: 1,
+      id: '2',
+      name: 'Miguel',
+      email: 'me@bpi.com',
     },
   ];
-  const pokemon: IUser = {
-    id: 1,
-    name: 'Pikachu',
-    image: '',
-    attack: 0,
-    defense: 0,
-    hp: 0,
-    type: '',
-    idAuthor: 1,
+  const user: IUser = {
+    id: '1',
+    name: 'Franco',
+    email: 'me@bpi.com',
   };
 
   beforeEach(async () => {
-    pokemonServiceMock = {
-      getAllPokemons: jest.fn().mockReturnValue(of([])),
-      createPokemon: jest.fn().mockReturnValue(of({})),
-      updatePokemon: jest.fn().mockReturnValue(of({})),
-      deletePokemon: jest.fn().mockReturnValue(of({})),
+    userServiceMock = {
+      getAll: jest.fn().mockReturnValue(of([])),
+      create: jest.fn().mockReturnValue(of({})),
+      update: jest.fn().mockReturnValue(of({})),
+      delete: jest.fn().mockReturnValue(of({})),
     };
 
     await TestBed.configureTestingModule({
@@ -56,7 +41,7 @@ describe('FeaturePageComponent', () => {
       providers: [
         {
           provide: UserService,
-          useValue: pokemonServiceMock,
+          useValue: userServiceMock,
         },
       ],
     }).compileComponents();
@@ -72,17 +57,17 @@ describe('FeaturePageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  test('should load pokemons on init', () => {
-    pokemonServiceMock.getAllPokemons.mockReturnValueOnce(
-      of(pokemons)
+  test('should load users on init', () => {
+    userServiceMock.getAll.mockReturnValueOnce(
+      of(users)
     );
 
     component.ngOnInit();
 
-    expect(component.data).toEqual(pokemons);
+    expect(component.data).toEqual(users);
   });
 
-  test('should show create pokemon form on add pokemon', () => {
+  test('should show create user form on add user', () => {
     component.onAddUser();
 
     expect(component.showAddButton).toBe(false);
@@ -90,16 +75,16 @@ describe('FeaturePageComponent', () => {
     expect(component.showEdit).toBe(false);
   });
 
-  test('should create a new pokemon', () => {
-    pokemonServiceMock.createPokemon.mockReturnValueOnce(of(pokemon));
+  test('should create a new user', () => {
+    userServiceMock.create.mockReturnValueOnce(of(user));
 
-    component.onCreateUser(pokemon);
+    component.onCreateUser(user);
 
     expect(component.showAddButton).toBe(true);
     expect(component.showCreate).toBe(false);
     expect(component.showEdit).toBe(false);
-    expect(pokemonServiceMock.createPokemon).toHaveBeenCalledWith(
-      pokemon
+    expect(userServiceMock.create).toHaveBeenCalledWith(
+      user
     );
   });
 
@@ -115,27 +100,27 @@ describe('FeaturePageComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('should pass when method onUpdatePokemon is called', () => {
-    const spy = jest.spyOn(component, 'onUpdatePokemon');
-    component.onUpdatePokemon(pokemon);
+  test('should pass when method onUpdateUser is called', () => {
+    const spy = jest.spyOn(component, 'onUpdateUser');
+    component.onUpdateUser(user);
     expect(spy).toHaveBeenCalled();
   });
 
-  test('should pass when method onEditPokemon is called', () => {
-    const spy = jest.spyOn(component, 'onEditPokemon');
-    component.onEditPokemon(pokemon);
+  test('should pass when method onEditUser is called', () => {
+    const spy = jest.spyOn(component, 'onEditUser');
+    component.onEditUser(user);
     expect(spy).toHaveBeenCalled();
   });
 
-  test('should pass when method onDeletePokemon is called', () => {
-    const spy = jest.spyOn(component, 'onDeletePokemon');
-    component.onDeletePokemon(pokemon);
+  test('should pass when method onDeleteUser is called', () => {
+    const spy = jest.spyOn(component, 'onDeleteUser');
+    component.onDeleteUser(user);
     expect(spy).toHaveBeenCalled();
   });
 
   test('should pass when method onModalConfirm is called', () => {
     const spy = jest.spyOn(component, 'onModalConfirm');
-    component.onModalConfirm(pokemon);
+    component.onModalConfirm(user);
     expect(spy).toHaveBeenCalled();
   });
 
@@ -145,9 +130,9 @@ describe('FeaturePageComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('should pass when method onCancelPokemon is called', () => {
-    const spy = jest.spyOn(component, 'onCancelPokemon');
-    component.onCancelPokemon();
+  test('should pass when method onCancelUser is called', () => {
+    const spy = jest.spyOn(component, 'onCancelUser');
+    component.onCancelUser();
     expect(spy).toHaveBeenCalled();
   });
 });

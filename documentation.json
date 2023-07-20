@@ -1,0 +1,3479 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "ICRUD",
+            "id": "interface-ICRUD-c13c267711fc8f85ef85c8d49ae3891529d50848773864489c52bbe99acfc8dc44fd3598a71a37077a5eeba424e2de64fc9ebdc91a920e789309f949d9535bc3",
+            "file": "src/app/feature/services/user.service.interface.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Observable } from \"rxjs\";\n\nexport interface ICRUD<T> {\n  getAll(): Observable<T[]>;\n  create(data: T): Observable<any>;\n  update(data: T): Observable<any>;\n  delete(id: string): Observable<any>;\n}\n",
+            "properties": [],
+            "indexSignatures": [],
+            "kind": 170,
+            "methods": [
+                {
+                    "name": "create",
+                    "args": [
+                        {
+                            "name": "data",
+                            "type": "T",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 5,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "data",
+                            "type": "T",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "delete",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 7,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getAll",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<T[]>",
+                    "typeParameters": [],
+                    "line": 4,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "update",
+                    "args": [
+                        {
+                            "name": "data",
+                            "type": "T",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 6,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "data",
+                            "type": "T",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "IUser",
+            "id": "interface-IUser-4db2eaefea134936feaf28dab18f95fed795d5cb8885cafe1d263bdbd0cc2565263bed77c052352d3581615754e70500aebd954b3279914ed9a5d0bbaca31a38",
+            "file": "src/app/feature/models/feature.models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface IUser {\n  id: string;\n  name: string;\n  email: string;\n}\n\nexport interface IUserSave {\n  id: string;\n  name: string;\n  email: string;\n}\n",
+            "properties": [
+                {
+                    "name": "email",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 168,
+            "methods": []
+        },
+        {
+            "name": "IUserSave",
+            "id": "interface-IUserSave-4db2eaefea134936feaf28dab18f95fed795d5cb8885cafe1d263bdbd0cc2565263bed77c052352d3581615754e70500aebd954b3279914ed9a5d0bbaca31a38",
+            "file": "src/app/feature/models/feature.models.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface IUser {\n  id: string;\n  name: string;\n  email: string;\n}\n\nexport interface IUserSave {\n  id: string;\n  name: string;\n  email: string;\n}\n",
+            "properties": [
+                {
+                    "name": "email",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 168,
+            "methods": []
+        },
+        {
+            "name": "User",
+            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "file": "src/stories/User.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {}\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "LoaderService",
+            "id": "injectable-LoaderService-4035a582693d09a869b62db6087d8eee5a141d3ae9ae672b422dcde4ce1b263d18e9154010f9cbeefc11eee68df1d855f1af54464f81192243cfdacc3182faaf",
+            "file": "src/app/feature/services/loader.service.ts",
+            "properties": [
+                {
+                    "name": "loaderState",
+                    "defaultValue": "this.loaderSubject.asObservable()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "loaderSubject",
+                    "defaultValue": "new BehaviorSubject<boolean>(false)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 8,
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methods": [
+                {
+                    "name": "hideLoader",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "showLoader",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 11,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport { BehaviorSubject } from 'rxjs';\n\n@Injectable({\n  providedIn: 'root',\n})\nexport class LoaderService {\n  private loaderSubject = new BehaviorSubject<boolean>(false);\n  loaderState = this.loaderSubject.asObservable();\n\n  showLoader() {\n    this.loaderSubject.next(true);\n  }\n\n  hideLoader() {\n    this.loaderSubject.next(false);\n  }\n}\n",
+            "type": "injectable"
+        },
+        {
+            "name": "UserService",
+            "id": "injectable-UserService-e975d761c78d3a1f7dbe64fc608b5ea44a78ca8050cdd581d279a4892d58761acecf220387e33369c260a2a5dc8b58d08c214236817d503490f29228ad1287a1",
+            "file": "src/app/feature/services/user.service.ts",
+            "properties": [
+                {
+                    "name": "baseUrl",
+                    "defaultValue": "'http://localhost:8882'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "http",
+                    "defaultValue": "inject(HttpClient)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "modifierKind": [
+                        121,
+                        146
+                    ]
+                }
+            ],
+            "methods": [
+                {
+                    "name": "create",
+                    "args": [
+                        {
+                            "name": "data",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 24,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "data",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "delete",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getAll",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<IUser[]>",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "update",
+                    "args": [
+                        {
+                            "name": "data",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "data",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable, inject } from '@angular/core';\nimport { Observable, map, retry } from 'rxjs';\nimport { IUser } from '../models/feature.models';\nimport { HttpClient } from '@angular/common/http';\nimport { ICRUD } from './user.service.interface';\n\n@Injectable({\n  providedIn: 'root',\n})\n\n//Solid (D) Principio de Inversión de Dependencia\nexport class UserService implements ICRUD<IUser> {\n  private readonly http = inject(HttpClient);\n  // baseUrl ='https://virtserver.swaggerhub.com/FGQUEIROLO/bci-users/1.0.0/';\n  baseUrl = 'http://localhost:8882';\n\n  getAll(): Observable<IUser[]> {\n    return this.http.get<IUser[]>(`${this.baseUrl}/users`).pipe(\n      retry(1),\n      map((res: IUser[]) => res)\n    );\n  }\n\n  create(data: IUser): Observable<any> {\n    return this.http.post(`${this.baseUrl}/users`, data);\n  }\n\n  update(data: IUser): Observable<any> {\n    const url = `${this.baseUrl}/users/${data.id}`;\n    console\n    return this.http.put(url, data);\n  }\n\n  delete(id: string): Observable<any> {\n    const url = `${this.baseUrl}/users_/${id}`;\n    return this.http.delete(url);\n  }\n}\n",
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [
+        {
+            "name": "LoaderInterceptor",
+            "id": "injectable-LoaderInterceptor-9f9b7644476ae189e58241159cc3ebd284391eb6428db8ebc09843f482a9c689055fbc7fe8df62f0836068aec962f7f289d4e6b1270daa825d47347f9259e0a2",
+            "file": "src/app/feature/interceptors/loader.interceptor.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "intercept",
+                    "args": [
+                        {
+                            "name": "req",
+                            "type": "HttpRequest<any>",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "next",
+                            "type": "HttpHandler",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<HttpEvent<any>>",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "req",
+                            "type": "HttpRequest<any>",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "next",
+                            "type": "HttpHandler",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport {\n  HttpEvent,\n  HttpHandler,\n  HttpInterceptor,\n  HttpRequest,\n} from '@angular/common/http';\nimport { Observable } from 'rxjs';\nimport { delay, finalize } from 'rxjs/operators';\nimport { LoaderService } from '../services/loader.service';\n\n@Injectable()\nexport class LoaderInterceptor implements HttpInterceptor {\n  constructor(private loaderService: LoaderService) {}\n\n  intercept(\n    req: HttpRequest<any>,\n    next: HttpHandler\n  ): Observable<HttpEvent<any>> {\n    this.loaderService.showLoader();\n\n    return next.handle(req).pipe(\n      delay(1000),\n      finalize(() => {\n        this.loaderService.hideLoader();\n      })\n    );\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "loaderService",
+                        "type": "LoaderService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 13,
+                "jsdoctags": [
+                    {
+                        "name": "loaderService",
+                        "type": "LoaderService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "type": "interceptor"
+        }
+    ],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-4eb02134c0ed8f51e851b5dc710d3ca624378db4a6fd513e5edcde1b2b6f46867cc7a4ac0b474619a29ceca2021fd65719fff963630f7a691651bb6c2da3502e",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'challenge-bpi'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "users",
+                    "defaultValue": "[\n    {\n      name: 'Juan',\n      lastname: 'Perez',\n      age: 30,\n    },\n    {\n      name: 'Ramon',\n      lastname: 'Vega',\n      age: 52,\n    },\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onSave",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 37,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { environment } from '../environments/environment';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n})\nexport class AppComponent {\n  title = 'challenge-bpi';\n  users = [\n    {\n      name: 'Juan',\n      lastname: 'Perez',\n      age: 30,\n    },\n    {\n      name: 'Ramon',\n      lastname: 'Vega',\n      age: 52,\n    },\n  ];\n\n  constructor() {\n    console.log(\n      '%c commit: ',\n      'background: #6559f1; color: white',\n      environment.commit\n    );\n    console.log(\n      '%c buildDate: ',\n      'background: #6559f1; color: white',\n      environment.buildDate\n    );\n  }\n\n  onSave(event: any) {\n    console.log(event.detail);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,\n    Helvetica, Arial, sans-serif, 'Apple Color Emoji',\n    'Segoe UI Emoji', 'Segoe UI Symbol';\n  font-size: 1rem;\n  color: #333;\n  box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 8px 0;\n}\n\np {\n  margin: 0;\n}\n\n.content {\n  max-width: 100%;\n  margin: 16px auto 0 auto;\n  width: 70%;\n}\n\nfooter {\n  margin-top: 8px;\n  display: flex;\n  align-items: center;\n  line-height: 20px;\n}\n",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 22
+            },
+            "templateData": "<div class=\"content\" role=\"main\">\n  <router-outlet></router-outlet>\n</div>\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-a53fd738b978780d39fb5fcc9ae4cfe0088e57a1f6ce674862d57dab9192140bd1c05548a9910db0469a431142886e658ff2e761f15781b2ad430e58d64724d0",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 786,
+                            "end": 799,
+                            "flags": 8421376,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 330,
+                            "tagName": {
+                                "pos": 787,
+                                "end": 795,
+                                "flags": 8421376,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 42,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 22,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 34,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 48,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  imports: [CommonModule],\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 50
+                    }
+                }
+            }
+        },
+        {
+            "name": "FeatureCreateComponent",
+            "id": "component-FeatureCreateComponent-c1cbbbb02585724802e267924e2fbe15fa40de8bb6f60ed541ffdaaff2a9fb6f4015daeb34d2efe82e4e229f930a0cad7c647a2d5b1febb7985c4b787ea9917b",
+            "file": "src/app/feature/views/feature-create/feature-create.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-feature-create",
+            "styleUrls": [
+                "./feature-create.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./feature-create.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "eeCancel",
+                    "defaultValue": "new EventEmitter<boolean>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "eeSave",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "typeCancel",
+                    "defaultValue": "TypesButtons.CANCEL",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "typeSave",
+                    "defaultValue": "TypesButtons.SAVE",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onHandlerCancel",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 51,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onHandlerSave",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 47,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  Component,\n  EventEmitter,\n  OnInit,\n  Output,\n} from '@angular/core';\nimport { TypesButtons } from '../../constants/feature.constants';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n  selector: 'app-feature-create',\n  templateUrl: './feature-create.component.html',\n  styleUrls: ['./feature-create.component.scss'],\n})\nexport class FeatureCreateComponent implements OnInit {\n  typeSave = TypesButtons.SAVE;\n  typeCancel = TypesButtons.CANCEL;\n  form!: FormGroup;\n  @Output()\n  eeSave = new EventEmitter<any>();\n  @Output()\n  eeCancel = new EventEmitter<boolean>();\n\n  constructor(private fb: FormBuilder) {\n  }\n\n  get disabledSave(): boolean {\n    return this.form.invalid;\n  }\n\n  get defense(): string {\n    return this.form.get('defense')?.value;\n  }\n\n  get attack(): string {\n    return this.form.get('attack')?.value;\n  }\n\n  ngOnInit(): void {\n    this.form = this.fb.group({\n      id: ['', Validators.required],\n      name: ['', Validators.required],\n      email: ['', Validators.email],\n    });\n  }\n\n  onHandlerSave() {\n    this.eeSave.emit(this.form.value);\n  }\n\n  onHandlerCancel() {\n    this.eeCancel.emit(true);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".content {\n  background-color: #fff;\n  border: 1px solid #ccc;\n  padding: 10px;\n\n  label {\n    color: #666;\n    font-weight: 500;\n  }\n\n  input {\n    margin-bottom: 8px;\n    width: 96%;\n  }\n\n  .buttons {\n    display: flex;\n    justify-content: space-between;\n  }\n\n  .form {\n    display: block;\n  }\n\n  .col {\n    margin: 8px 0;\n    width: 100%;\n  }\n}\n",
+                    "styleUrl": "./feature-create.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 22,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "disabledSave": {
+                    "name": "disabledSave",
+                    "getSignature": {
+                        "name": "disabledSave",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 27
+                    }
+                },
+                "defense": {
+                    "name": "defense",
+                    "getSignature": {
+                        "name": "defense",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 31
+                    }
+                },
+                "attack": {
+                    "name": "attack",
+                    "getSignature": {
+                        "name": "attack",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 35
+                    }
+                }
+            },
+            "templateData": "<div class=\"content\">\n  <h3>Crear Usuario</h3>\n\n  <form [formGroup]=\"form\" class=\"form\">\n    <div class=\"col\">\n      <label for=\"\">\n        Nombre:\n        <input\n          type=\"text\"\n          formControlName=\"name\"\n          placeholder=\"Ingresa nombre\"\n        />\n      </label>\n      <label for=\"\">\n        Correo:\n        <input\n          type=\"text\"\n          formControlName=\"email\"\n          placeholder=\"Ingresa correo\"\n        />\n      </label>\n    </div>\n  </form>\n\n  <div class=\"buttons\">\n    <bpi-button\n      [icon]=\"typeCancel\"\n      (eeHandler)=\"onHandlerCancel()\"\n    >\n      Cancelar\n    </bpi-button>\n    \n    <bpi-button\n      [icon]=\"typeSave\"\n      (eeHandler)=\"onHandlerSave()\"\n      [disabled]=\"disabledSave\"\n    >\n      Guardar\n    </bpi-button>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "FeatureEditComponent",
+            "id": "component-FeatureEditComponent-4a341c1ee16865781f95e42d8fd4c725bd8571f88a66e395a3786c6601bd0221d33cb97e3213ecc04b4037ec222e65d96c273ba671b217753f318c2deb18edca",
+            "file": "src/app/feature/views/feature-edit/feature-edit.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-feature-edit",
+            "styleUrls": [
+                "./feature-edit.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./feature-edit.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "currentUser",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "IUser",
+                    "decorators": []
+                },
+                {
+                    "name": "show",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "eeCancel",
+                    "defaultValue": "new EventEmitter<boolean>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "eeSave",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "typeCancel",
+                    "defaultValue": "TypesButtons.CANCEL",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "typeSave",
+                    "defaultValue": "TypesButtons.SAVE",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 37,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onHandlerCancel",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 54,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onHandlerSave",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 50,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  Component,\n  EventEmitter,\n  Input,\n  OnInit,\n  Output,\n} from '@angular/core';\nimport { TypesButtons } from '../../constants/feature.constants';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\nimport { IUser } from '../../models/feature.models';\n\n@Component({\n  selector: 'app-feature-edit',\n  templateUrl: './feature-edit.component.html',\n  styleUrls: ['./feature-edit.component.scss'],\n})\nexport class FeatureEditComponent implements OnInit {\n  typeSave = TypesButtons.SAVE;\n  typeCancel = TypesButtons.CANCEL;\n  form!: FormGroup;\n  @Output()\n  eeSave = new EventEmitter<any>();\n  @Output()\n  eeCancel = new EventEmitter<boolean>();\n  @Input()\n  show: boolean = false;\n  @Input()\n  currentUser!: IUser;\n\n  constructor(private fb: FormBuilder) {\n    this.form = this.fb.group({\n      id: [''],\n      name: ['', Validators.required],\n      email: ['', [Validators.required, Validators.email]],\n    });\n  }\n  ngOnInit(): void {\n    const user = this.currentUser;\n    this.form.patchValue({\n      id: user.id,\n      name: user.name,\n      email: user.email,\n    });\n  }\n\n  get disabledSave(): boolean {\n    return this.form?.invalid;\n  }\n\n  onHandlerSave() {\n    this.eeSave.emit(this.form?.value);\n  }\n\n  onHandlerCancel() {\n    this.eeCancel.emit(true);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".content {\n  background-color: #fff;\n  border: 1px solid #ccc;\n  padding: 10px;\n\n  label {\n    color: #666;\n    font-weight: 500;\n  }\n\n  input {\n    margin-bottom: 8px;\n    width: 96%;\n  }\n\n  .buttons {\n    display: flex;\n    justify-content: space-between;\n  }\n\n  .form {\n    display: block;\n  }\n\n  .col {\n    margin: 8px 0;\n    width: 100%;\n  }\n}\n",
+                    "styleUrl": "./feature-edit.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 28,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "disabledSave": {
+                    "name": "disabledSave",
+                    "getSignature": {
+                        "name": "disabledSave",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 46
+                    }
+                }
+            },
+            "templateData": "<div class=\"content\">\n  <h3>Editar Usuario</h3>\n\n  <form [formGroup]=\"form\" class=\"form\">\n    <div class=\"col\">\n      <label for=\"\">\n        Nombre:\n        <input\n          type=\"text\"\n          formControlName=\"name\"\n          placeholder=\"Ingresa nombre\"\n        />\n      </label>\n      <label for=\"\">\n        Correo:\n        <input\n          type=\"text\"\n          formControlName=\"email\"\n          placeholder=\"Ingresa correo\"\n        />\n      </label>\n    </div>\n    <div class=\"col\"></div>\n  </form>\n\n  <div class=\"buttons\">\n    <bpi-button\n      [icon]=\"typeCancel\"\n      (eeHandler)=\"onHandlerCancel()\"\n    >\n      Cancelar\n    </bpi-button>\n\n    <bpi-button\n      [icon]=\"typeSave\"\n      (eeHandler)=\"onHandlerSave()\"\n      [disabled]=\"disabledSave\"\n    >\n      Actualizar\n    </bpi-button>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "FeatureModalComponent",
+            "id": "component-FeatureModalComponent-2c26c4c78ae856f141376c9affc103163903227cfaffc6754773cb6aea6c0b2c317de9bdcfaaec4ee4abfcd0329f3ae222f486fabf00dce2c5dcebc37692e7bc",
+            "file": "src/app/feature/components/feature-modal/feature-modal.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-feature-modal",
+            "styleUrls": [
+                "./feature-modal.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./feature-modal.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "currentUser",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "IUser",
+                    "decorators": []
+                },
+                {
+                    "name": "show",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "eeCancel",
+                    "defaultValue": "new EventEmitter<boolean>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "eeConfirm",
+                    "defaultValue": "new EventEmitter<IUser>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onCancel",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onConfirm",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 24,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  Component,\n  EventEmitter,\n  Input,\n  Output,\n} from '@angular/core';\nimport { IUser } from '../../models/feature.models';\n\n@Component({\n  selector: 'app-feature-modal',\n  templateUrl: './feature-modal.component.html',\n  styleUrls: ['./feature-modal.component.scss'],\n})\nexport class FeatureModalComponent {\n  @Input()\n  show: boolean = false;\n  @Input()\n  currentUser!: IUser;\n  @Output()\n  eeConfirm = new EventEmitter<IUser>();\n  @Output()\n  eeCancel = new EventEmitter<boolean>();\n\n  onConfirm() {\n    this.eeConfirm.emit(this.currentUser);\n  }\n  onCancel() {\n    this.eeCancel.emit(true);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "// Variables de colores\n$modal-background-color: rgba(0, 0, 0, 0.5);\n$modal-container-background-color: #fff;\n\n.modal-overlay {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: $modal-background-color;\n  z-index: 9999;\n\n  .modal-container {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    background-color: $modal-container-background-color;\n    border-radius: 5px;\n    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);\n    padding: 20px;\n    width: 80%;\n    max-width: 600px;\n    text-align: center;\n\n    .modal-header {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      width: 100%;\n\n      h2 {\n        font-size: 1.5rem;\n        margin: 0;\n      }\n\n      .close-btn {\n        background-color: transparent;\n        border: none;\n        font-size: 1.5rem;\n        cursor: pointer;\n      }\n    }\n\n    .modal-body {\n      margin: 20px 0;\n    }\n\n    .modal-footer {\n      display: flex;\n      justify-content: space-between;\n      width: 100%;\n\n      .cancel-btn {\n        background-color: #d9534f;\n        color: #fff;\n        border: none;\n        border-radius: 3px;\n        padding: 8px 16px;\n        font-size: 1rem;\n        cursor: pointer;\n      }\n\n      .confirm-btn {\n        background-color: #5cb85c;\n        color: #fff;\n        border: none;\n        border-radius: 3px;\n        padding: 8px 16px;\n        font-size: 1rem;\n        cursor: pointer;\n      }\n    }\n  }\n}\n",
+                    "styleUrl": "./feature-modal.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"modal-overlay\" *ngIf=\"show\">\n  <div class=\"modal-container\">\n    <div class=\"modal-header\">\n      <h2>Confirmación de eliminación</h2>\n      <button class=\"close-btn\" (click)=\"onCancel()\">&times;</button>\n    </div>\n    <div class=\"modal-body\">\n      <p>\n        Estas seguro que deseas eliminar a este usuario\n        {{ currentUser.name | uppercase }}\n      </p>\n    </div>\n    <div class=\"modal-footer\">\n      <button class=\"cancel-btn\" (click)=\"onCancel()\">\n        Cancelar\n      </button>\n      <button class=\"confirm-btn\" (click)=\"onConfirm()\">\n        Confirmar\n      </button>\n    </div>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "FeaturePageComponent",
+            "id": "component-FeaturePageComponent-0a1ebd2acdca1fc472367d63d341bb5efe2bcf3d8e2e8351c86b7ed9f79aa5d910538cca60dd9f24826627db10697117e3db5b72ad1386f78987b292c8f8f737",
+            "file": "src/app/feature/views/feature-page/feature-page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-feature-page",
+            "styleUrls": [
+                "./feature-page.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./feature-page.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "currentUser",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IUser",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "data",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IUser[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "errorMessage",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "loaderService",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "LoaderService",
+                    "optional": false,
+                    "description": "",
+                    "line": 27,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "showAddButton",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                },
+                {
+                    "name": "showCreate",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "showEdit",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "showErrorAlert",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "showModal",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                },
+                {
+                    "name": "subs",
+                    "defaultValue": "new Subscription()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Subscription",
+                    "optional": false,
+                    "description": "",
+                    "line": 23
+                },
+                {
+                    "name": "typeAdd",
+                    "defaultValue": "TypesButtons.ADD",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "loadUsers",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 43,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnDestroy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onAddUser",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 71,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onCancelUser",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 124,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onCreateUser",
+                    "args": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 76,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onDeleteUser",
+                    "args": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 119,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onEditUser",
+                    "args": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 112,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onModalCancel",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 154,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onModalConfirm",
+                    "args": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 135,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onSearch",
+                    "args": [
+                        {
+                            "name": "val",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 61,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "val",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onUpdateUser",
+                    "args": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 94,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setInitValues",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 128,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "showErrorMessage",
+                    "args": [
+                        {
+                            "name": "errMessage",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "errMessage",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { UserService } from '../../services/user.service';\nimport { Subscription, catchError, tap, throwError } from 'rxjs';\nimport { TypesButtons } from '../../constants/feature.constants';\nimport { IUser } from '../../models/feature.models';\nimport { LoaderService } from '../../services/loader.service';\n\n@Component({\n  selector: 'app-feature-page',\n  templateUrl: './feature-page.component.html',\n  styleUrls: ['./feature-page.component.scss'],\n})\nexport class FeaturePageComponent implements OnInit {\n  typeAdd = TypesButtons.ADD;\n  data!: IUser[];\n  currentUser!: IUser;\n  errorMessage: string = '';\n  showCreate = false;\n  showEdit = false;\n  showErrorAlert = false;\n  showModal = false;\n  showAddButton = true;\n  subs: Subscription = new Subscription();\n\n  constructor(\n    private userService: UserService,\n    public loaderService: LoaderService\n  ) {}\n\n  ngOnInit(): void {\n    this.loadUsers();\n  }\n\n  ngOnDestroy() {\n    this.subs.unsubscribe();\n  }\n\n  showErrorMessage(errMessage: string): void {\n    this.showErrorAlert = true;\n    this.errorMessage = errMessage || 'Generic Error';\n  }\n\n  loadUsers() {\n    this.subs.add(\n      this.userService\n        .getAll()\n        .pipe(\n          tap((res: IUser[]) => {\n            this.data = res;\n            this.setInitValues();\n          }),\n          catchError((error) => {\n            this.showErrorMessage(error.message);\n            return throwError(() => error);\n          })\n        )\n        .subscribe()\n    );\n  }\n\n  onSearch(val: string): void {\n    if (val.length >= 3) {\n      this.data = this.data.filter((user: IUser) =>\n        String(user.name).toLowerCase().includes(val)\n      );\n    } else {\n      this.loadUsers();\n    }\n  }\n\n  onAddUser() {\n    this.showAddButton = false;\n    this.showCreate = true;\n  }\n\n  onCreateUser(user: IUser) {\n    this.subs.add(\n      this.userService\n        .create(user)\n        .pipe(\n          tap((res) => {\n            this.loadUsers();\n            this.setInitValues();\n          }),\n          catchError((error) => {\n            this.showErrorMessage(error.message);\n            return throwError(() => error);\n          })\n        )\n        .subscribe()\n    );\n  }\n\n  onUpdateUser(user: IUser) {\n    this.subs.add(\n      this.userService\n        .update(user)\n        .pipe(\n          tap((res) => {\n            this.loadUsers();\n            this.setInitValues();\n          }),\n          catchError((error) => {\n            this.showErrorMessage(error.message);\n            return throwError(() => error);\n          })\n        )\n        .subscribe()\n    );\n  }\n\n  onEditUser(user: IUser) {\n    this.showCreate = false;\n    this.showAddButton = false;\n    this.currentUser = user;\n    this.showEdit = true;\n  }\n\n  onDeleteUser(user: IUser) {\n    this.currentUser = user;\n    this.showModal = true;\n  }\n\n  onCancelUser() {\n    this.setInitValues();\n  }\n\n  setInitValues(): void {\n    this.showAddButton = true;\n    this.showCreate = false;\n    this.showEdit = false;\n    this.errorMessage = '';\n  }\n\n  onModalConfirm(user: IUser) {\n    this.showModal = false;\n\n    this.subs.add(\n      this.userService\n        .delete(user.id)\n        .pipe(\n          tap((res: IUser[]) => {\n            this.loadUsers();\n          }),\n          catchError((error) => {\n            this.showErrorMessage(error.message);\n            return throwError(() => error);\n          })\n        )\n        .subscribe()\n    );\n  }\n\n  onModalCancel() {\n    this.showModal = false;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".nav {\n  display: flex;\n  justify-content: space-between;\n  margin: 8px 0;\n  align-items: center\n}",
+                    "styleUrl": "./feature-page.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "userService",
+                        "type": "UserService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "loaderService",
+                        "type": "LoaderService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 23,
+                "jsdoctags": [
+                    {
+                        "name": "userService",
+                        "type": "UserService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "loaderService",
+                        "type": "LoaderService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div *ngIf=\"loaderService.loaderState | async\">\n  <bpi-loader></bpi-loader>\n</div>\n\n<h2>Mantenimiento de usuarios BCI</h2>\n\n<div class=\"nav\">\n  <app-feature-search\n    (eeSearch)=\"onSearch($event)\"\n  ></app-feature-search>\n\n  <bpi-button\n    [icon]=\"typeAdd\"\n    (eeHandler)=\"onAddUser()\"\n    *ngIf=\"showAddButton\"\n  >\n    Nuevo\n  </bpi-button>\n</div>\n\n<app-feature-table\n  (eeEdit)=\"onEditUser($event)\"\n  (eeDelete)=\"onDeleteUser($event)\"\n  [data]=\"data\"\n></app-feature-table>\n\n<bpi-alert\n  icon=\"info\"\n  [show]=\"errorMessage != ''\"\n  [message]=\"errorMessage\"\n></bpi-alert>\n\n<ng-container *ngIf=\"showCreate\">\n  <app-feature-create\n    *ngIf=\"showCreate\"\n    (eeSave)=\"onCreateUser($event)\"\n    (eeCancel)=\"onCancelUser()\"\n  ></app-feature-create>\n</ng-container>\n\n<ng-container *ngIf=\"showEdit\">\n  <app-feature-edit\n    [currentUser]=\"currentUser\"\n    (eeSave)=\"onUpdateUser($event)\"\n    (eeCancel)=\"onCancelUser()\"\n  ></app-feature-edit>\n</ng-container>\n\n<app-feature-modal\n  [show]=\"showModal\"\n  [currentUser]=\"currentUser\"\n  (eeConfirm)=\"onModalConfirm($event)\"\n  (eeCancel)=\"onModalCancel()\"\n></app-feature-modal>\n"
+        },
+        {
+            "name": "FeatureSearchComponent",
+            "id": "component-FeatureSearchComponent-a6918a65dd1c8cccf2e2bb26cb6bf481de52c6e81556e30f05bb2cd6a706a64a845350077f26686fdee4fa4b7c8b8e4dceff1640abd0d1a6150f102064e20bef",
+            "file": "src/app/feature/components/feature-search/feature-search.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-feature-search",
+            "styleUrls": [
+                "./feature-search.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./feature-search.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "eeSearch",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  Component,\n  EventEmitter,\n  OnInit,\n  Output,\n} from '@angular/core';\nimport { FormBuilder, FormGroup } from '@angular/forms';\n\n@Component({\n  selector: 'app-feature-search',\n  templateUrl: './feature-search.component.html',\n  styleUrls: ['./feature-search.component.scss'],\n})\nexport class FeatureSearchComponent implements OnInit {\n  form!: FormGroup;\n  @Output()\n  eeSearch = new EventEmitter<string>();\n\n  constructor(private fb: FormBuilder) {}\n\n  ngOnInit(): void {\n    this.form = this.fb.group({\n      search: [''],\n    });\n\n    this.form.get('search')?.valueChanges.subscribe((val) => {\n      this.eeSearch.emit(val);\n    });\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".search-container {\n  position: relative;\n  display: inline-block;\n\n  input[type='text'] {\n    padding-left: 30px;\n    width: 100%;\n  }\n\n  .search-icon {\n    position: absolute;\n    top: 50%;\n    left: 5px;\n    transform: translateY(-50%);\n    font-size: 1.2rem;\n    color: #ccc;\n  }\n}\n",
+                    "styleUrl": "./feature-search.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 17,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"search-container\">\n  <form [formGroup]=\"form\">\n    <input\n      formControlName=\"search\"\n      type=\"text\"\n      placeholder=\"Buscar...\"\n    />\n    <span class=\"material-icons search-icon\">search</span>\n  </form>\n</div>\n"
+        },
+        {
+            "name": "FeatureTableComponent",
+            "id": "component-FeatureTableComponent-985541080a7b7e1bf74eaeb0f4cef918a190565004211777a204d6e46980ab302e05f640286b786ea561c663ee82dc05a2ccae04d21abeffbaef902ce30e8d8b",
+            "file": "src/app/feature/components/feature-table/feature-table.component.ts",
+            "encapsulation": [
+                "ViewEncapsulation.Emulated"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-feature-table",
+            "styleUrls": [
+                "./feature-table.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./feature-table.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "data",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "IUser[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "eeDelete",
+                    "defaultValue": "new EventEmitter<IUser>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "eeEdit",
+                    "defaultValue": "new EventEmitter<IUser>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "currentPage",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "pageSize",
+                    "defaultValue": "5",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "currentPageData",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any[]",
+                    "typeParameters": [],
+                    "line": 43,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getNumbers",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "{}",
+                    "typeParameters": [],
+                    "line": 55,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnChanges",
+                    "args": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 49,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onDelete",
+                    "args": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onEdit",
+                    "args": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "user",
+                            "type": "IUser",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onPageChange",
+                    "args": [
+                        {
+                            "name": "pageNumber",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "pageNumber",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "totalPages",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  Component,\n  EventEmitter,\n  Input,\n  OnChanges,\n  Output,\n  SimpleChanges,\n  ViewEncapsulation,\n} from '@angular/core';\nimport { IUser } from '../../models/feature.models';\n\n@Component({\n  selector: 'app-feature-table',\n  templateUrl: './feature-table.component.html',\n  styleUrls: ['./feature-table.component.scss'],\n  encapsulation: ViewEncapsulation.Emulated,\n})\nexport class FeatureTableComponent implements OnChanges {\n  @Input() data: IUser[] = [];\n  @Output()\n  eeEdit = new EventEmitter<IUser>();\n  @Output()\n  eeDelete = new EventEmitter<IUser>();\n  pageSize = 5;\n  currentPage = 1;\n\n  onEdit(user: IUser) {\n    this.eeEdit.emit(user);\n  }\n\n  onDelete(user: IUser) {\n    this.eeDelete.emit(user);\n  }\n\n  onPageChange(pageNumber: number) {\n    this.currentPage = pageNumber;\n  }\n\n  totalPages(): number {\n    return Math.ceil(this.data.length / this.pageSize);\n  }\n\n  currentPageData(): any[] {\n    const startIndex = (this.currentPage - 1) * this.pageSize;\n    const endIndex = startIndex + this.pageSize;\n    return this.data.slice(startIndex, endIndex);\n  }\n\n  ngOnChanges(changes: SimpleChanges) {\n    if (changes) {\n      this.currentPage = 1;\n    }\n  }\n\n  getNumbers() {\n    let numbers = [];\n    for (let i = 1; i <= this.totalPages(); i++) {\n      numbers.push(i);\n    }\n    return numbers;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import 'src/assets/styles/colors.scss';\n\n.table {\n  background-color: white;\n  border: 1px solid #ccc;\n  width: 100%;\n  margin-bottom: 8px;\n\n  .header {\n    font-weight: bold;\n  }\n\n  .cell {\n    border: 1px solid #f2f2f2;\n    padding: 10px;\n\n    &.actions {\n      text-align: center;\n      span {\n        color: $color-primary;\n        cursor: pointer;\n        font-size: 1.5rem;\n\n        &:hover {\n          color: $color-secondary;\n        }\n\n        &:first-child {\n          margin-right: 16px;\n        }\n      }\n    }\n  }\n}\n\n.buttons {\n  text-align: right;\n  margin-bottom: 5px;\n  button {\n    border-radius: 5px;\n    background-color: $color-primary;\n    color: white;\n    font-weight: bold;\n    border: none;\n    padding: 10px;\n    margin: 0 0 0 5px;\n    cursor: pointer;\n    &:hover {\n      background-color: $color-secondary;\n      color: $color-primary;\n    }\n    &.active {\n      color: $color-primary;\n      background-color: #ccc;\n    }\n  }\n}\n",
+                    "styleUrl": "./feature-table.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnChanges"
+            ],
+            "templateData": "<div *ngIf=\"data\">\n  <table class=\"table\" cellspacing=\"0\">\n    <tr class=\"header\">\n      <td class=\"cell\">ID</td>\n      <td class=\"cell\">Nombre</td>\n      <td class=\"cell\">Correo</td>\n      <td class=\"cell actions\">Acciones</td>\n    </tr>\n    <tr\n      class=\"row\"\n      *ngFor=\"let item of currentPageData(); let i = index\"\n    >\n      <td class=\"cell\">{{ item.id }}</td>\n      <td class=\"cell\">{{ item.name | titlecase }}</td>\n      <td class=\"cell\">{{ item.email }}</td>\n      <td class=\"cell actions\">\n        <span class=\"material-icons\" (click)=\"onEdit(item)\"\n          >edit</span\n        >\n        <span class=\"material-icons\" (click)=\"onDelete(item)\"\n          >delete</span\n        >\n      </td>\n    </tr>\n  </table>\n  <div class=\"buttons\">\n    <button\n      *ngFor=\"let pageNumber of getNumbers()\"\n      [class.active]=\"pageNumber === currentPage\"\n      (click)=\"onPageChange(pageNumber)\"\n    >\n      {{ pageNumber }}\n    </button>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-3d494fd89671305c6be07de00e019efdf08f2e36c2169e5fb75a5acdb2841da927e3ef3cbd21cc18f478373a784b1fb90e8b63b9df4b3498a75b652bd9c37b38",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 65,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 74,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 68,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 71,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n\n.welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-badb6d8cee577661da79ba82ad8f599604afd40fa34e36c7b88d71d77a4fbc7184228cba2f0d73e255d0b7bc51c4c7a8e7b0128b3624aeb0255abab9030fa59a",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "User | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 64
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "doCreateAccount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 74,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 70,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 66,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": ""
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-80cf457ed0aa62bd7850700f3a55c3b41f8797258ea9a95923eb24762b0c174cf421c35ab0a69a1512ee2a3787bafd78f9f1cecc64e4d8cdddf3906178055b74",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport {\n  HTTP_INTERCEPTORS,\n  HttpClientModule,\n} from '@angular/common/http';\n\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { LoaderInterceptor } from './feature/interceptors/loader.interceptor';\nimport { LoaderService } from './feature/services/loader.service';\nimport { FeatureModule } from './feature/feature.module';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    HttpClientModule,\n    ReactiveFormsModule,\n    FeatureModule\n  ],\n  providers: [\n    {\n      provide: HTTP_INTERCEPTORS,\n      useClass: LoaderInterceptor,\n      multi: true,\n    },\n    LoaderService,\n  ],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": [
+                        {
+                            "name": "LoaderInterceptor"
+                        },
+                        {
+                            "name": "LoaderService"
+                        }
+                    ]
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "FeatureModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-a39c8a27f58631baf073088ef490593e370361424f029b08f11032f5a63167c5c1392b8db14b208092ca4134c9c602a507a27d7988fce619c3aa246e9a455b0b",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { FeaturePageComponent } from './feature/views/feature-page/feature-page.component';\n\nconst routes: Routes = [\n  {\n    path: '',\n    component: FeaturePageComponent,\n  },\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule],\n})\nexport class AppRoutingModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "FeatureModule",
+            "id": "module-FeatureModule-12b6b79d9c2969dab3dd5ee0a0a830d5e580e22d609ef25c683e0280d03845f06dcdbc84a0ff055508725559eb0cebca890936965af62812f6bca20592dce763",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/feature/feature.module.ts",
+            "methods": [],
+            "sourceCode": "import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { FeatureTableComponent } from './components/feature-table/feature-table.component';\nimport { FeaturePageComponent } from './views/feature-page/feature-page.component';\nimport { FeatureCreateComponent } from './views/feature-create/feature-create.component';\nimport { FeatureSearchComponent } from './components/feature-search/feature-search.component';\nimport { FeatureEditComponent } from './views/feature-edit/feature-edit.component';\nimport { FeatureModalComponent } from './components/feature-modal/feature-modal.component';\nimport { ReactiveFormsModule } from '@angular/forms';\n\nconst COMPONENTS = [\n  FeatureTableComponent,\n  FeaturePageComponent,\n  FeatureCreateComponent,\n  FeatureSearchComponent,\n  FeatureEditComponent,\n  FeatureModalComponent,\n];\n\nconst MODULES = [CommonModule, ReactiveFormsModule];\n\n@NgModule({\n  declarations: [...COMPONENTS],\n  imports: [...MODULES],\n  exports: [...COMPONENTS],\n  schemas: [CUSTOM_ELEMENTS_SCHEMA],\n})\nexport class FeatureModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "FeatureCreateComponent"
+                        },
+                        {
+                            "name": "FeatureEditComponent"
+                        },
+                        {
+                            "name": "FeatureModalComponent"
+                        },
+                        {
+                            "name": "FeaturePageComponent"
+                        },
+                        {
+                            "name": "FeatureSearchComponent"
+                        },
+                        {
+                            "name": "FeatureTableComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "FeatureCreateComponent"
+                        },
+                        {
+                            "name": "FeatureEditComponent"
+                        },
+                        {
+                            "name": "FeatureModalComponent"
+                        },
+                        {
+                            "name": "FeaturePageComponent"
+                        },
+                        {
+                            "name": "FeatureSearchComponent"
+                        },
+                        {
+                            "name": "FeatureTableComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Basic",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/components/feature-search/feature-search.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {},\n}"
+            },
+            {
+                "name": "Basic",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/components/feature-modal/feature-modal.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    show: true,\n    currentUser: {\n      id: '1',\n      name: 'Franco',\n      email: 'nobody@example.com',\n    },\n  },\n}"
+            },
+            {
+                "name": "COMPONENTS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/feature.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  FeatureTableComponent,\n  FeaturePageComponent,\n  FeatureCreateComponent,\n  FeatureSearchComponent,\n  FeatureEditComponent,\n  FeatureModalComponent,\n]"
+            },
+            {
+                "name": "Create",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/views/feature-create/feature-create.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {},\n}"
+            },
+            {
+                "name": "Edit",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/views/feature-edit/feature-edit.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    show: true,\n    currentUser: {\n      id: '1',\n      name: 'Franco',\n      email: 'nobody@example.com',\n    },\n  },\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true,\n  commit: 'abc123',\n  buildDate: new Date().toISOString(),\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false,\n  commit: 'abc123',\n  buildDate: new Date().toISOString(),\n}"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Button>",
+                "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Header>",
+                "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Page>",
+                "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/components/feature-search/feature-search.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<FeatureSearchComponent>",
+                "defaultValue": "{\n  title: 'Example/FeatureSearchComponent',\n  component: FeatureSearchComponent,\n  tags: ['autodocs'],\n  render: (args: FeatureSearchComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/components/feature-modal/feature-modal.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<FeatureModalComponent>",
+                "defaultValue": "{\n  title: 'Example/FeatureModalComponent',\n  component: FeatureModalComponent,\n  tags: ['autodocs'],\n  render: (args: FeatureModalComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/views/feature-edit/feature-edit.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<FeatureEditComponent>",
+                "defaultValue": "{\n  title: 'Example/FeatureEditComponent',\n  component: FeatureEditComponent,\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule],\n    }),\n  ],\n  tags: ['autodocs'],\n  render: (args: FeatureEditComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/views/feature-create/feature-create.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<FeatureCreateComponent>",
+                "defaultValue": "{\n  title: 'Example/FeatureCreateComponent',\n  component: FeatureCreateComponent,\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule],\n    }),\n  ],\n  tags: ['autodocs'],\n  render: (args: FeatureCreateComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
+            },
+            {
+                "name": "MODULES",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/feature/feature.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[CommonModule, ReactiveFormsModule]"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: '^on[A-Z].*' },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Button>",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Header>",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Page>",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<FeatureSearchComponent>",
+                "file": "src/app/feature/components/feature-search/feature-search.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<FeatureModalComponent>",
+                "file": "src/app/feature/components/feature-modal/feature-modal.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<FeatureEditComponent>",
+                "file": "src/app/feature/views/feature-edit/feature-edit.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<FeatureCreateComponent>",
+                "file": "src/app/feature/views/feature-create/feature-create.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            }
+        ],
+        "enumerations": [
+            {
+                "name": "TypesButtons",
+                "childs": [
+                    {
+                        "name": "ADD",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "add"
+                    },
+                    {
+                        "name": "SAVE",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "save_as"
+                    },
+                    {
+                        "name": "CANCEL",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "cancel"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/app/feature/constants/feature.constants.ts"
+            }
+        ],
+        "groupedVariables": {
+            "src/app/feature/components/feature-search/feature-search.component.stories.ts": [
+                {
+                    "name": "Basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/components/feature-search/feature-search.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {},\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/components/feature-search/feature-search.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<FeatureSearchComponent>",
+                    "defaultValue": "{\n  title: 'Example/FeatureSearchComponent',\n  component: FeatureSearchComponent,\n  tags: ['autodocs'],\n  render: (args: FeatureSearchComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
+                }
+            ],
+            "src/app/feature/components/feature-modal/feature-modal.component.stories.ts": [
+                {
+                    "name": "Basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/components/feature-modal/feature-modal.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    show: true,\n    currentUser: {\n      id: '1',\n      name: 'Franco',\n      email: 'nobody@example.com',\n    },\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/components/feature-modal/feature-modal.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<FeatureModalComponent>",
+                    "defaultValue": "{\n  title: 'Example/FeatureModalComponent',\n  component: FeatureModalComponent,\n  tags: ['autodocs'],\n  render: (args: FeatureModalComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
+                }
+            ],
+            "src/app/feature/feature.module.ts": [
+                {
+                    "name": "COMPONENTS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/feature.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  FeatureTableComponent,\n  FeaturePageComponent,\n  FeatureCreateComponent,\n  FeatureSearchComponent,\n  FeatureEditComponent,\n  FeatureModalComponent,\n]"
+                },
+                {
+                    "name": "MODULES",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/feature.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[CommonModule, ReactiveFormsModule]"
+                }
+            ],
+            "src/app/feature/views/feature-create/feature-create.component.stories.ts": [
+                {
+                    "name": "Create",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/views/feature-create/feature-create.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {},\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/views/feature-create/feature-create.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<FeatureCreateComponent>",
+                    "defaultValue": "{\n  title: 'Example/FeatureCreateComponent',\n  component: FeatureCreateComponent,\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule],\n    }),\n  ],\n  tags: ['autodocs'],\n  render: (args: FeatureCreateComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
+                }
+            ],
+            "src/app/feature/views/feature-edit/feature-edit.component.stories.ts": [
+                {
+                    "name": "Edit",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/views/feature-edit/feature-edit.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    show: true,\n    currentUser: {\n      id: '1',\n      name: 'Franco',\n      email: 'nobody@example.com',\n    },\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/feature/views/feature-edit/feature-edit.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<FeatureEditComponent>",
+                    "defaultValue": "{\n  title: 'Example/FeatureEditComponent',\n  component: FeatureEditComponent,\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule],\n    }),\n  ],\n  tags: ['autodocs'],\n  render: (args: FeatureEditComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true,\n  commit: 'abc123',\n  buildDate: new Date().toISOString(),\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false,\n  commit: 'abc123',\n  buildDate: new Date().toISOString(),\n}"
+                }
+            ],
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Button>",
+                    "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Header>",
+                    "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Page>",
+                    "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: '^on[A-Z].*' },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {
+            "src/app/feature/constants/feature.constants.ts": [
+                {
+                    "name": "TypesButtons",
+                    "childs": [
+                        {
+                            "name": "ADD",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "add"
+                        },
+                        {
+                            "name": "SAVE",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "save_as"
+                        },
+                        {
+                            "name": "CANCEL",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "cancel"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/app/feature/constants/feature.constants.ts"
+                }
+            ]
+        },
+        "groupedTypeAliases": {
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Button>",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Header>",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Page>",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/app/feature/components/feature-search/feature-search.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FeatureSearchComponent>",
+                    "file": "src/app/feature/components/feature-search/feature-search.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/app/feature/components/feature-modal/feature-modal.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FeatureModalComponent>",
+                    "file": "src/app/feature/components/feature-modal/feature-modal.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/app/feature/views/feature-edit/feature-edit.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FeatureEditComponent>",
+                    "file": "src/app/feature/views/feature-edit/feature-edit.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/app/feature/views/feature-create/feature-create.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FeatureCreateComponent>",
+                    "file": "src/app/feature/views/feature-create/feature-create.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [
+                    {
+                        "path": "",
+                        "component": "FeaturePageComponent"
+                    }
+                ],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 2,
+        "status": "low",
+        "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/components/feature-modal/feature-modal.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/components/feature-modal/feature-modal.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/components/feature-modal/feature-modal.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FeatureModalComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/components/feature-search/feature-search.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/components/feature-search/feature-search.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/components/feature-search/feature-search.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FeatureSearchComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/components/feature-table/feature-table.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FeatureTableComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/13",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/feature.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "COMPONENTS",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/feature.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MODULES",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/interceptors/loader.interceptor.ts",
+                "type": "interceptor",
+                "linktype": "interceptor",
+                "name": "LoaderInterceptor",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/models/feature.models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "IUser",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/models/feature.models.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "IUserSave",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/services/loader.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "LoaderService",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/services/user.service.interface.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ICRUD",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/services/user.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "UserService",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/views/feature-create/feature-create.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Create",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/views/feature-create/feature-create.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/views/feature-create/feature-create.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FeatureCreateComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/views/feature-edit/feature-edit.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Edit",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/views/feature-edit/feature-edit.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/views/feature-edit/feature-edit.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FeatureEditComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/feature/views/feature-page/feature-page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FeaturePageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/27",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/User.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            }
+        ]
+    }
+}

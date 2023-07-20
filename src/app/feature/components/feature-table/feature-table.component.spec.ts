@@ -24,33 +24,23 @@ describe('FeatureTableComponent', () => {
 
   test('should pass when method onEdit is clicked', () => {
     const spy = jest.spyOn(component, 'onEdit');
-    const pokemon: IUser = {
-      id: 0,
+    const user: IUser = {
+      id: '0',
       name: '',
-      image: '',
-      attack: 0,
-      defense: 0,
-      hp: 0,
-      type: '',
-      idAuthor: 0,
+      email: '',
     };
-    component.onEdit(pokemon);
+    component.onEdit(user);
     expect(spy).toHaveBeenCalled();
   });
 
   test('should pass when method onDelete is clicked', () => {
     const spy = jest.spyOn(component, 'onDelete');
-    const pokemon: IUser = {
-      id: 0,
+    const user: IUser = {
+      id: '0',
       name: '',
-      image: '',
-      attack: 0,
-      defense: 0,
-      hp: 0,
-      type: '',
-      idAuthor: 0,
+      email: '',
     };
-    component.onDelete(pokemon);
+    component.onDelete(user);
     expect(spy).toHaveBeenCalled();
   });
 

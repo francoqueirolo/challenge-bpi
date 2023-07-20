@@ -1,5 +1,10 @@
 <div *ngIf="data">
-  <table class="table" cellspacing="0">
+  <div class="buttons">
+    <bpi-button (click)="downloadImage()" icon="download">
+      Reporte
+    </bpi-button>
+  </div>
+  <table class="table" cellspacing="0" #reporte>
     <tr class="header">
       <td class="cell">ID</td>
       <td class="cell">Nombre</td>

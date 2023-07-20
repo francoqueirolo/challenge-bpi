@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FeatureEditComponent } from './feature-edit.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('FeatureEditComponent', () => {
   let component: FeatureEditComponent;
@@ -8,6 +9,7 @@ describe('FeatureEditComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ReactiveFormsModule],
       declarations: [FeatureEditComponent],
       schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();

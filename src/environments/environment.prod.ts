@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  commit: 'abc123',
+  buildDate: new Date().toISOString(),
 };

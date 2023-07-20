@@ -2,15 +2,16 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { FeatureEditComponent } from './feature-edit.component';
 import { CommonModule } from '@angular/common';
 import { moduleMetadata } from '@storybook/angular';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
 const meta: Meta<FeatureEditComponent> = {
-  title: 'Example/FeatureEditComponent',
+  title: 'BPI/FeatureEditComponent',
   component: FeatureEditComponent,
   decorators: [
     moduleMetadata({
       declarations: [],
-      imports: [CommonModule],
+      imports: [CommonModule, ReactiveFormsModule],
     }),
   ],
   tags: ['autodocs'],
@@ -30,8 +31,8 @@ export const Edit: Story = {
   args: {
     show: true,
     currentUser: {
-      id: 1,
-      name: 'Pikachu',
+      id: '1',
+      name: 'Franco',
       email: 'nobody@example.com',
     },
   },

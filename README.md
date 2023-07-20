@@ -29,3 +29,9 @@ Execute the command in the `terminal`
 ```js
 docker run -p 8080:80 bpi-app
 ```
+
+Api Documentation
+
+```js
+https://app.swaggerhub.com/apis/FGQUEIROLO/bpi-users/1.0.0
+```

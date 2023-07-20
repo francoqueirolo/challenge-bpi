@@ -3,35 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FeatureTableComponent } from './feature/components/feature-table/feature-table.component';
-import { FeaturePageComponent } from './feature/views/feature-page/feature-page.component';
-import { FeatureCreateComponent } from './feature/views/feature-create/feature-create.component';
+
 import {
   HTTP_INTERCEPTORS,
   HttpClientModule,
 } from '@angular/common/http';
-import { FeatureSearchComponent } from './feature/components/feature-search/feature-search.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
-import { FeatureEditComponent } from './feature/views/feature-edit/feature-edit.component';
-import { FeatureModalComponent } from './feature/components/feature-modal/feature-modal.component';
 import { LoaderInterceptor } from './feature/interceptors/loader.interceptor';
 import { LoaderService } from './feature/services/loader.service';
+import { FeatureModule } from './feature/feature.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FeatureTableComponent,
-    FeaturePageComponent,
-    FeatureCreateComponent,
-    FeatureSearchComponent,
-    FeatureEditComponent,
-    FeatureModalComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FeatureModule
   ],
   providers: [
     {
@@ -42,6 +32,5 @@ import { LoaderService } from './feature/services/loader.service';
     LoaderService,
   ],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
