@@ -1,0 +1,42 @@
+<div class="content">
+  <h3>Editar Usuario</h3>
+
+  <form [formGroup]="form" class="form">
+    <div class="col">
+      <label for="">
+        Nombre:
+        <input
+          type="text"
+          formControlName="name"
+          placeholder="Ingresa nombre"
+        />
+      </label>
+      <label for="">
+        Correo:
+        <input
+          type="text"
+          formControlName="email"
+          placeholder="Ingresa correo"
+        />
+      </label>
+    </div>
+    <div class="col"></div>
+  </form>
+
+  <div class="buttons">
+    <bpi-button
+      [icon]="typeCancel"
+      (eeHandler)="onHandlerCancel()"
+    >
+      Cancelar
+    </bpi-button>
+
+    <bpi-button
+      [icon]="typeSave"
+      (eeHandler)="onHandlerSave()"
+      [disabled]="disabledSave"
+    >
+      Actualizar
+    </bpi-button>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div *ngIf="data">
+  <table class="table" cellspacing="0">
+    <tr class="header">
+      <td class="cell">ID</td>
+      <td class="cell">Nombre</td>
+      <td class="cell">Correo</td>
+      <td class="cell actions">Acciones</td>
+    </tr>
+    <tr
+      class="row"
+      *ngFor="let item of currentPageData(); let i = index"
+    >
+      <td class="cell">{{ item.id }}</td>
+      <td class="cell">{{ item.name | titlecase }}</td>
+      <td class="cell">{{ item.email }}</td>
+      <td class="cell actions">
+        <span class="material-icons" (click)="onEdit(item)"
+          >edit</span
+        >
+        <span class="material-icons" (click)="onDelete(item)"
+          >delete</span
+        >
+      </td>
+    </tr>
+  </table>
+  <div class="buttons">
+    <button
+      *ngFor="let pageNumber of getNumbers()"
+      [class.active]="pageNumber === currentPage"
+      (click)="onPageChange(pageNumber)"
+    >
+      {{ pageNumber }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div *ngIf="loaderService.loaderState | async">
+  <bpi-loader></bpi-loader>
+</div>
+
+<h2>Mantenimiento de usuarios BCI</h2>
+
+<div class="nav">
+  <app-feature-search
+    (eeSearch)="onSearch($event)"
+  ></app-feature-search>
+
+  <bpi-button
+    [icon]="typeAdd"
+    (eeHandler)="onAddUser()"
+    *ngIf="showAddButton"
+  >
+    Nuevo
+  </bpi-button>
+</div>
+
+<app-feature-table
+  (eeEdit)="onEditUser($event)"
+  (eeDelete)="onDeleteUser($event)"
+  [data]="data"
+></app-feature-table>
+
+<bpi-alert
+  icon="info"
+  [show]="errorMessage != ''"
+  [message]="errorMessage"
+></bpi-alert>
+
+<ng-container *ngIf="showCreate">
+  <app-feature-create
+    *ngIf="showCreate"
+    (eeSave)="onCreateUser($event)"
+    (eeCancel)="onCancelUser()"
+  ></app-feature-create>
+</ng-container>
+
+<ng-container *ngIf="showEdit">
+  <app-feature-edit
+    [currentUser]="currentUser"
+    (eeSave)="onUpdateUser($event)"
+    (eeCancel)="onCancelUser()"
+  ></app-feature-edit>
+</ng-container>
+
+<app-feature-modal
+  [show]="showModal"
+  [currentUser]="currentUser"
+  (eeConfirm)="onModalConfirm($event)"
+  (eeCancel)="onModalCancel()"
+></app-feature-modal>

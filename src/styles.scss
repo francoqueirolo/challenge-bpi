@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/styles/colors';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  padding: 10px 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+
+  &[type='text'] {
+    padding-left: 10px;
+    color: $color-text;
+  }
+}
+
+td {
+  font-size: 0.9rem;
+  color: $color-text;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $color-bg;
+}
+
+h2 {
+  color: $color-text;
+}
+
+app-feature-table {
+  .table {
+    border-color: $color-primary;
+  }
+}

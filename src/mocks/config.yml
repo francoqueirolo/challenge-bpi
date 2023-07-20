@@ -1,0 +1,36 @@
+- request:
+    method: GET
+    url: ^/users
+  response:
+    headers:
+      content-type: application/json
+    file: ./get-users/data.json
+
+- request:
+    method: POST
+    url: ^/users
+    headers:
+      content-type: application/json
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./create-user/data.json
+
+- request:
+    method: PUT
+    url: ^/users/(\d+)
+    headers:
+      content-type: application/json
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    file: ./create-user/data.json
+
+- request:
+    url: ^/users/([0-9a-fA-F-]+)$ # Expresión regular para capturar el UUID del usuario
+    method: DELETE
+  response:
+    status: 200
+    body: '{"message": "Usuario eliminado exitosamente"}'
